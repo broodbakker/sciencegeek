@@ -1,7 +1,7 @@
 {
   "name": "science_geek",
   "version": "1.0.0",
-  "description": "",
+  "description": "website for science",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
