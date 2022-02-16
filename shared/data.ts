@@ -66,5 +66,5 @@ export const posts = [post, post1, post2, post3, post, post1, post2, post3, post
 
 export const NAV_NAMES = ["Home", "History", "Nature", "Human", "Quirky", "Space", "Tech"]
 export const NAV_LINKS = ["/", "/history", "/nature", "/human", "/quirky", "/space", "/tech"]
-export const NAV_SLIDER_NAMES =  ["Home", "History", "Nature", "Human", "Quirky", "Space", "Tech","Over ScienceGeek"]
+export const NAV_SLIDER_NAMES = ["Home", "History", "Nature", "Human", "Quirky", "Space", "Tech", "Over ScienceGeek"]
 export const NAV_SLIDER_LINKS = ["/", "/history", "/nature", "/human", "/quirky", "/space", "/tech", "/over-sciencegeek"]

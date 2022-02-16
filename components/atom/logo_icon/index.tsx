@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import Image from "next/image"
+//atom
+import { Img } from "../../atom/image"
 
 type LogoTextType = {
 }
@@ -10,10 +11,8 @@ const ImgContainer = styled.div`
 `
 export const LogoIcon = ({ }: LogoTextType) =>
   <ImgContainer >
-    <Image
+    <Img
       src="/images/sciencegeeklogo.png"
       alt="sciencegeek-logo"
-      layout="fill"
-      objectFit="cover"
     />
   </ImgContainer>
