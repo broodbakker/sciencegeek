@@ -68,3 +68,7 @@ export const NAV_NAMES = ["Home", "History", "Nature", "Human", "Quirky", "Space
 export const NAV_LINKS = ["/", "/history", "/nature", "/human", "/quirky", "/space", "/tech"]
 export const NAV_SLIDER_NAMES = ["Home", "History", "Nature", "Human", "Quirky", "Space", "Tech", "Over ScienceGeek"]
 export const NAV_SLIDER_LINKS = ["/", "/history", "/nature", "/human", "/quirky", "/space", "/tech", "/over-sciencegeek"]
+
+export const TIME_TILL_HIDDEN_BG = 3
+export const LOADING_IMAGE = '/images/loadingImage.svg'
+export const LOADING_ALT = 'this is a background image'

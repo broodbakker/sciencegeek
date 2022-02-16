@@ -1,27 +1,29 @@
-import styled from "styled-components"
+//atom
+import Image from "./image"
+//constants
+import { TIME_TILL_HIDDEN_BG, LOADING_IMAGE,LOADING_ALT } from "../../../shared/data"
+//hooks
+import useTimeLeft from "../../../hooks/useTimeLeft"
 
-type ImgProps = {
+type backgroundImageProps = {
   src: string
   alt: string
 }
 
-const Container = styled.img`
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit: cover;
-`
-export const Img = ({ src, alt }: ImgProps) =>
-  <Container
-    src={src}
-    alt={alt}
-  />
-
-//   <Image
-//   src={src}
-//   alt={alt}
-//   layout="fill"
-//   objectFit="cover"
-// />
+export const Img = ({ src, alt, }: backgroundImageProps) => {
+  const timeLeft = useTimeLeft(TIME_TILL_HIDDEN_BG)
+  return (
+    <>
+      {timeLeft !== 0 && <Image
+        src={LOADING_IMAGE}
+        alt={LOADING_ALT}
+      />}
+      <Image
+        src={src}
+        alt={alt}
+      />
+    </>
+  )
+}
 
 

@@ -11,7 +11,7 @@ type ButtonProps = {
 const Button = ({ name, link }: ButtonProps) =>
   <Link href={link}>
     <a>
-      <B size="medium" label={name} icon={<Next color="white" />} reverse primary color="secondary" />4
+      <B size="medium" label={name} icon={<Next color="white" />} reverse primary color="secondary" />
     </a>
   </Link>
 

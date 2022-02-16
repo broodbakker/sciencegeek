@@ -1,4 +1,4 @@
-import { Box,  Stack } from "grommet"
+import { Box, Stack } from "grommet"
 import styled from "styled-components"
 //atom
 import { Title } from "../../atom/headPost_title"
@@ -11,20 +11,21 @@ type HeadPostProps = {
   src: string
   alt: string
   title: string
+  timeLeft: number
 }
 
-const HeadPost = ({ src, alt, title }: HeadPostProps) =>
+const HeadPost = ({ src, alt, title,timeLeft }: HeadPostProps) => {
+  return (
   <CustomStack anchor="bottom-left" fill>
     <Box fill height="small">
-      <Img
-        src={src}
-        alt={alt}
-      />
+      <Img src={src} alt={alt} />
     </Box>
 
     <Box pad="small">
       <Title name={title} />
     </Box>
   </CustomStack>
+  )
+}
 
 export default HeadPost;
