@@ -7,10 +7,10 @@ import styled from "styled-components"
 import { NAV_LINKS, NAV_SLIDER_LINKS } from "../shared/data"
 import { GLOBALSTYLE } from "../shared/styles"
 //organism
-import Navbar from "../organism/navbar/index"
-import NavMenuSlider from "../template/navMenuSlider/index"
-import SearchMenu from "../template/searchSection/index"
-import Footer from "../organism/footer/index"
+import Navbar from "../components/organism/navbar/index"
+import NavMenuSlider from "../components/template/navMenuSlider/index"
+import SearchMenu from "../components/template/searchSection/index"
+import Footer from "../components/organism/footer/index"
 //functions
 import { isRoute } from "../utils"
 
@@ -32,7 +32,6 @@ const T = styled(Box)`
     padding:10px;
   }
 `
-
 type LayoutProps = {
 }
 export const Layout: FunctionComponent<LayoutProps> = ({ children }) => {

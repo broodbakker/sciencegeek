@@ -1,4 +1,4 @@
-import SubjectPage from "../template/subjectPage"
+import SubjectPage from "../components/template/subjectPage"
 
 type SubjectProps = {
 }

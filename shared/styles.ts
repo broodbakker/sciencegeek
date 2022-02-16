@@ -31,7 +31,7 @@ export const customTheme = deepMerge(grommet, {
       // Setting new colors
       brand: '#250352',
       primary: '#250352',
-      backgroundSearch:"#faf6fe",
+      backgroundSearch: "#faf6fe",
       secondary: "#F1B33C",
       secondaryLight: "#faf6fe",
       tertiary: '#DDDDDD',
@@ -44,9 +44,24 @@ export const customTheme = deepMerge(grommet, {
       backgroundGrey: "#EDEDED",
       backgroundNavColor: "#2503521f",
       focus: '#F1B33C',
-      backgroundDark: "#222222"
+      backgroundDark: "#222222",
+
     }
-  }
+  },
+  button: {
+    color: { light: "white" },
+    size: {
+      small: {
+        border: { radius: "0px", }
+      },
+      medium: {
+        border: { radius: "0px", }
+      },
+      large: {
+        border: { radius: "0px", }
+      }
+    },
+  },
 });
 
 

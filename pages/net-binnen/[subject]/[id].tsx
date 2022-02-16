@@ -1,7 +1,6 @@
-import NetBinnenPage from "../../../template/net-binnenPage"
+import NetBinnenPage from "../../../components/template/net-binnenPage"
 
 type NetBinnenProps = {
-
 }
 
 const NetBinnen = ({ }: NetBinnenProps) => {

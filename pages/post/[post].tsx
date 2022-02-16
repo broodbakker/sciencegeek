@@ -1,4 +1,4 @@
-import PostPage from "../../template/postPage"
+import PostPage from "../../components/template/postPage"
 
 type PostProps = {
 }

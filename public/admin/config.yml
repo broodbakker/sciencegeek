@@ -2,8 +2,15 @@
 backend:
   name: git-gateway
   branch: master
-media_folder: /public/img
-public_folder: /img
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dta9vptzh
+    api_key: 651661895481873
+
+
+public_folder: /image
 publish_mode: editorial_workflow
 
 collections:
@@ -12,23 +19,23 @@ collections:
     folder: "content/auteurs"
     create: true
     fields:
-      - {name: naam, label: Naam}
+      - {name: naam, label: Name}
 
   - name: tags
     label: Tags
     folder: "content/tags"
     create: true
     fields:
-      - {name: naam, label: Naam}
+      - {name: naam, label: Name}
 
-  - name: photo's
-    label: Photo's
-    folder: "content/photo's"
+  - name: photos
+    label: Photos
+    folder: "content/photos"
     create: true
     fields:
-      - {name: onderschrift, label: Onderschrift,required: true}
-      - {name: bron, label: Bron,required: false}
-      - {label: "Image", name: "image", widget: "image",required: true}
+      - {name: title, label: Title,required: true}
+      - {name: source, label: Source,required: false}
+      - {name: "image", label: "Image",  widget: "image",required: true}
 
   - name: posts
     label: Posts
@@ -37,44 +44,43 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post.template"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "Subtitle", widget: "string", required: false}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - name: headerPhoto
         label: HeaderPhoto
         widget: relation
         collection: photo's
-        searchFields: [image,onderschrift]
+        searchFields: [image, title]
         required: true
         display_fields: [image]
         valueField: "{{slug}}"
         options_length: 3
 
-
       - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Onderwerp"
-        name: "onderwerp"
+      - label: "Subject"
+        name: "subject"
         widget: "select"
         options: ["history","human","nature","quirky","space","tech"]
-      - name: auteur
-        label: Auteur
+      - name: author
+        label: Author
         widget: relation
-        collection: auteurs
-        searchFields: [naam]
-        valueField: naam
+        collection: authors
+        searchFields: [Name]
+        valueField: Name
       - name: tags
         label: Tags
         widget: relation
         collection: tags
-        searchFields: [naam]
+        searchFields: [Name]
         multiple: true
-        valueField: naam
+        valueField: name
         required: false
-      - name: photo's
-        label: Photo's
+      - name: photos
+        label: Photos
         widget: relation
-        collection: photo's
-        searchFields: [onderschrift]
-        display_fields: [onderschrift]
+        collection: photos
+        searchFields: [title]
+        display_fields: [title]
         multiple: true
         valueField: "{{slug}}"
         required: false
